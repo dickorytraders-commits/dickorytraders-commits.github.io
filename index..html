@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DICKORY BUSINESS SERVICES — Application Portal Prototype</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=VGUt4vb_zUXCef_bhq7aDLZ4xFPqQeDs0wCfQZyOyHaa65eSZr3-Kp9XMJQN4JRPjIzg-qJki8EPJrJkEVzo3AmWrTDLICRh2X1v-z-QRSLP_WjHgbAUIyg8w54KlH4NZ8ImPHl_qsS5p6eN_jAdYouGgVmbaQUaZRNdFRabIFxqa80Kbe8pftQycLKqVejWFxB4wK9TTbSXDyIeuCmRaermmbeyLuDTnQXx-MdsRCBXqAUUBlIkEPFw-uZlIZdDAVrJDmi3ST4WOPf3vDuwnlISnmJsk6aJM8Pn3OFxNQBs9MSZtKkyPQh74BMs5TwiHOs38HFPjb2kmu37vrI91yQrrUf79KjUH8gdGQ2rNVw" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDRiNWM4MjExYjY5NjY2ZjRhNThjZGExOCZmbj1kaWNrb3J5X2J1c2luZXNzX3NlcnZpY2VzX2FsbF9zZXJ2aWNlc19wYXltZW50Lmh0bWwmY2Q9YXR0YWNobWVudCZ0cz00OTcyMTgmcD1mcyZjaWQ9MSZzaWc9YTFlNTY1YmJkMGFhMGVjZTczNjZiNDU4NjVjODZhNjhiYWQ1NDQ2MTYxOWZiY2UwZjY2NTI0ODQ5ZjI2ZDE0MSZ2PTA"/><style>
+:root{--black:#111;--gold:#c9a227;--cream:#f7f3e8;--white:#fff;--muted:#6b6b6b;--line:#e6e1d5;--green:#168a4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f5f3;color:#181818}
+header{background:var(--black);color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:5}
+.logo{font-weight:800;letter-spacing:.08em}.logo span{color:var(--gold)}nav{display:flex;gap:18px;font-size:14px}nav a{color:#fff;text-decoration:none;cursor:pointer}nav a:hover{color:var(--gold)}
+.container{max-width:1180px;margin:auto;padding:32px 20px}.hero{background:linear-gradient(120deg,#111,#292929);color:#fff;border-radius:22px;padding:36px;margin-bottom:24px}
+h1{font-size:34px;margin:0 0 8px}.hero p{color:#ddd;max-width:760px}.badge{display:inline-block;background:#2c2410;color:#e4c85d;padding:7px 11px;border-radius:99px;font-size:12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 18px #00000008}.service{cursor:pointer;transition:.15s}.service:hover{transform:translateY(-2px);border-color:var(--gold)}.service h3{margin:8px 0}.price{font-weight:800;color:#8d6d00}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:20px}.hidden{display:none}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.step{padding:8px 12px;border-radius:99px;background:#eee;color:#777;font-size:12px}.step.active{background:var(--black);color:#fff}
+label{display:block;font-weight:650;font-size:13px;margin:14px 0 6px}input,select,textarea{width:100%;padding:12px;border:1px solid #d8d4ca;border-radius:10px;font:inherit;background:#fff}textarea{min-height:90px}
+.row{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+button{border:0;border-radius:10px;padding:12px 17px;font-weight:750;cursor:pointer}.primary{background:var(--gold);color:#111}.dark{background:#111;color:#fff}.ghost{background:#eee;color:#222}
+.notice{background:#fff9df;border-left:4px solid var(--gold);padding:13px;margin:15px 0}.success{background:#e9f8ef;border-left:4px solid var(--green);padding:13px;margin:15px 0}
+.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0}.check input{width:auto;margin-top:4px}
+table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+footer{background:#111;color:#ddd;padding:28px 5%;margin-top:40px}
+@media(max-width:700px){nav{display:none}.row{grid-template-columns:1fr}h1{font-size:28px}.container{padding:20px 14px}}
+</style>
+</head>
+<body>
+<header><div class="logo">DICKORY <span>BUSINESS SERVICES</span></div><nav>
+      <a href="#servicesSection">Services</a>
+      <a href="#howItWorks">How It Works</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/254796437208" target="_blank">WhatsApp</a>
+    </nav></header>
+
+<main class="container">
+<section class="hero">
+  <span class="badge">CUSTOMER APPLICATION PORTAL — PROTOTYPE</span>
+  <h1>Business Support. Applications. Growth.</h1>
+  <p>Select a service, review the requirements, pay the DICKORY service fee, then complete your application. Government/authority fees remain separate and are paid directly to the relevant authority when officially invoiced.</p>
+</section>
+
+<section id="servicesSection">
+<h2>Select a service</h2>
+<div class="grid" id="services"></div>
+</section>
+
+<section id="workflow" class="panel hidden">
+  <div class="steps" id="steps"></div>
+  <div id="content"></div>
+</section>
+</main>
+
+<section id="howItWorks" class="panel">
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><strong>1. Choose a service</strong><p>Select the service you need and review its requirements.</p></div>
+    <div class="card"><strong>2. Pay DICKORY</strong><p>Pay only the applicable DICKORY service fee through M-Pesa.</p></div>
+    <div class="card"><strong>3. Complete your application</strong><p>Provide the required information and documents.</p></div>
+    <div class="card"><strong>4. DICKORY reviews</strong><p>We review your information and request replacements where necessary.</p></div>
+    <div class="card"><strong>5. Preparation & submission</strong><p>Once complete, DICKORY prepares and submits the application.</p></div>
+    <div class="card"><strong>6. Track progress</strong><p>Follow application updates through your customer portal.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="panel">
+  <h2>Contact DICKORY</h2>
+  <div class="grid">
+    <div class="card"><strong>Phone / WhatsApp</strong><p>0796437208</p><button class="primary" onclick="whatsappGeneral()">Chat on WhatsApp</button></div>
+    <div class="card"><strong>Email</strong><p>dickorytraders@gmail.com</p><button class="dark" onclick="emailGeneral()">Send Email</button></div>
+  </div>
+</section>
+
+<footer>
+<strong>DICKORY BUSINESS SERVICES</strong><br>
+0796437208 · dickorytraders@gmail.com<br><br>
+<small>Independent application assistance service. Government decisions, fees and processing times are determined by the relevant authority.</small>
+</footer>
+
+<script>
+const services = {
+"class-i":{name:"Class I Work Permit",fee:5000,desc:"For qualifying religious/missionary activities.",
+req:["Recent passport-size coloured photos","Passport bio-data","Current immigration status (if in Kenya)","Signed cover letter addressed to the Director General of Immigration Services","Local religious society registration certificate","Sending religious society registration proof","Sending society letter with physical address, telephone, email and senior official details","Recognized local umbrella religious body support letter","Religious training evidence","Ordination certificate where applicable","Academic certificates","Actual place of work details"]},
+"class-q":{name:"Class Q Work Permit",fee:5000,desc:"For qualifying professionals working for religious or charitable organizations.",
+req:["Passport-size photos","Passport bio-data","Current immigration status","Applicant signed cover letter","Employer/company/organization cover letter","Proof of nationality","Professional-body/government clearance where applicable","Academic/professional certificates","CV","Suitable understudy details","Employment contract/letter","Organization HQ physical address","Incorporation/registration certificate","Organization and individual tax compliance/exemption evidence"]},
+"class-r":{name:"Class R Work Permit",fee:5000,desc:"For eligible EAC citizens undertaking qualifying activities in Kenya.",
+req:["Passport bio-data","Passport photos","Current immigration status","Cover letter","Organization/business registration documents","Academic/professional certificates","Purpose-specific supporting documents where applicable"]},
+"visitor":{name:"Visitor's Pass Extension",fee:1000,desc:"Assistance with extension of an existing Visitor's Pass.",
+req:["Passport bio-data/copy","Original/current Visitor's Pass copy","Reason for requested extension","Any additional document requested by the authority"]},
+"agpo":{name:"AGPO Registration",fee:1000,gov:false,desc:"Assistance with registration for eligible AGPO categories.",
+req:["Passport photo","Certificate of incorporation/registration","IDs of all directors/shareholders","Current-year CR12","KRA tax compliance certificate showing the business/company name"]},
+"ifmis":{name:"IFMIS Registration",fee:1000,gov:false,desc:"Supplier registration assistance for IFMIS.",
+req:["KRA PIN certificate","Certificate of incorporation/registration","Valid business permit","Official company/business email","Contact person details"]},
+"egp":{name:"eGP Registration",fee:1000,gov:false,desc:"Electronic government procurement registration assistance.",
+req:["Valid BRS business/company registration number","Kenya National ID number for the relevant individual","Business/individual KRA PIN","Registration/incorporation/compliance certificate","Official mobile number","Official email address"]}
+};
+
+let selected=null, step=0, appRef=null, paid=false, paymentPending=false;
+
+const servicesEl=document.getElementById("services");
+Object.entries(services).forEach(([id,s])=>{
+ const d=document.createElement("div");d.className="card service";
+ d.innerHTML=`<div class="badge">${id==="agpo"||id==="ifmis"||id==="egp"?"BUSINESS SERVICE":"IMMIGRATION SERVICE"}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">DICKORY service fee: KES ${s.fee.toLocaleString()}</div>`;
+ d.onclick=()=>start(id);servicesEl.appendChild(d);
+});
+
+function start(id){selected=services[id];step=0;paid=false;paymentPending=false;appRef=null;document.getElementById("workflow").classList.remove("hidden");render();document.getElementById("workflow").scrollIntoView({behavior:"smooth"});}
+function render(){
+ const names=["Review","Payment","Application","Documents","Confirmation"];
+ document.getElementById("steps").innerHTML=names.map((n,i)=>`<div class="step ${i===step?"active":""}">${i+1}. ${n}</div>`).join("");
+ const c=document.getElementById("content");
+ if(step===0)c.innerHTML=review();
+ if(step===1)c.innerHTML=payment();
+ if(step===2)c.innerHTML=application();
+ if(step===3)c.innerHTML=documents();
+ if(step===4)c.innerHTML=confirmation();
+}
+function review(){return `<h2>${selected.name}</h2><p>${selected.desc}</p>
+<table><tr><th>DICKORY service fee</th><td><strong>KES ${selected.fee.toLocaleString()}</strong></td></tr>${selected.gov===false?"<tr><th>Government/authority fee</th><td><strong>No government charge included for this service.</strong></td></tr>":"<tr><th>Government/authority fee</th><td>Separate — customer pays the relevant authority directly when officially invoiced.</td></tr>"}<tr><th>DICKORY preparation</th><td>Normally up to approximately 3 hours once complete information and documents are received.</td></tr></table>
+<div class="notice"><strong>Important:</strong> Payment on this screen is for DICKORY's service fee only.</div>
+<div class="check"><input type="checkbox" id="agree"><label for="agree">I understand the service-fee and government-fee separation and want to proceed.</label></div>
+<div class="actions"><button class="primary" onclick="agreeProceed()">I Agree & Proceed</button><button class="ghost" onclick="whatsapp()">WhatsApp DICKORY</button></div>`}
+function agreeProceed(){if(!document.getElementById("agree").checked){alert("Please confirm that you understand the fee arrangement.");return}step=1;render()}
+function payment(){return `<h2>Pay DICKORY service fee with M-Pesa</h2>
+<p>Enter the <strong>Safaricom M-Pesa number</strong> you want to use. The live system will send an M-Pesa prompt with the exact DICKORY service fee already filled in.</p>
+<table><tr><th>Service</th><td>${selected.name}</td></tr><tr><th>DICKORY service fee</th><td><strong>KES ${selected.fee.toLocaleString()}</strong></td></tr><tr><th>Payee</th><td>DICKORY TRADERS</td></tr></table>
+<div class="notice"><strong>Version 1 payment process:</strong><br>1. Enter your M-Pesa number.<br>2. Pay the amount due using either the M-Pesa Till or PayBill above.<br>3. Forward the M-Pesa confirmation message to DICKORY via WhatsApp.<br>4. Forward the M-Pesa confirmation message to DICKORY via WhatsApp.<br>5. DICKORY verifies the payment manually.<br>6. DICKORY unlocks the application so you can continue.</div>
+<div class="row"><div><label>M-Pesa phone number</label><input id="phone" placeholder="07XXXXXXXX or 2547XXXXXXXX" inputmode="tel"></div><div><label>Amount</label><input value="KES ${selected.fee.toLocaleString()}" readonly></div></div>
+<div id="promptBox" class="hidden"></div>
+<div class="actions"><button class="primary" onclick="sendMpesaPrompt()">pay using the M-Pesa Till or PayBill</button><button class="ghost" onclick="back()">Back</button></div>`}
+function normalizePhone(v){
+  let x=v.replace(/\s+/g,"").replace(/^\+/,"");
+  if(x.startsWith("07")||x.startsWith("01")) x="254"+x.substring(1);
+  return x;
+}
+function sendMpesaPrompt(){
+  const raw=document.getElementById("phone").value.trim();
+  const phone=normalizePhone(raw);
+  if(!/^254(7|1)\d{8}$/.test(phone)){
+    alert("Please enter a valid Kenyan M-Pesa number, for example 0712345678.");
+    return;
+  }
+  const box=document.getElementById("promptBox");
+  box.classList.remove("hidden");
+  box.className="success";
+  box.innerHTML=`<strong>M-Pesa prompt sent (prototype)</strong><br>
+  A real implementation will send an STK Push to <strong>${phone}</strong> for <strong>KES ${selected.fee.toLocaleString()}</strong>.<br><br>
+  <strong>On your phone:</strong> check the M-Pesa prompt and enter your M-Pesa PIN.<br><br>
+  <button class="primary" onclick="simulatePaymentMade()">I have paid</button>
+  <button class="ghost" onclick="simulateFailedMpesa()">Payment failed / cancelled</button>`;
+}
+function simulatePaymentMade(){
+  paymentPending=true;
+  appRef="DBS-2026-"+String(Math.floor(Math.random()*99999)+1).padStart(5,"0");
+  const box=document.getElementById("promptBox");
+  box.className="notice";
+  box.innerHTML=`<strong>Payment awaiting verification</strong><br>Your payment is not yet marked as paid in the system.<br><br>Please forward your M-Pesa confirmation message to DICKORY Business Services on WhatsApp.
+  <div class="actions"><button class="primary" onclick="whatsappPayment()">Send M-Pesa Confirmation via WhatsApp</button></div>
+  <hr><strong>Admin demo:</strong> after checking the M-Pesa message, click below to manually verify and unlock the application.
+  <div class="actions"><button class="dark" onclick="adminUnlock()">Verify Payment & Unlock</button></div>`;
+}
+function adminUnlock(){
+  paid=true;
+  paymentPending=false;
+  step=2;
+  render();
+}
+function whatsappPayment(){
+  const ref=appRef||"your application";
+  const msg=`Hello DICKORY BUSINESS SERVICES. I have paid the DICKORY service fee for application ${ref}. I am sending my M-Pesa confirmation message for verification and unlocking.`;
+  window.open("https://wa.me/254796437208?text="+encodeURIComponent(msg),"_blank");
+}
+function simulateFailedMpesa(){
+  const box=document.getElementById("promptBox");
+  box.className="notice";
+  box.innerHTML="<strong>Payment not confirmed.</strong><br>Your application remains unpaid. You can try the M-Pesa prompt again.";
+}
+function application(){if(!paid)return `<h2>Application Locked</h2><div class="notice"><strong>Payment verification required.</strong><br>Please send your M-Pesa confirmation via WhatsApp. DICKORY will manually verify the payment and unlock this application.</div><div class="actions"><button class="primary" onclick="whatsappPayment()">Send M-Pesa Confirmation via WhatsApp</button><button class="ghost" onclick="back()">Back</button></div>`;
+ let common=`<div class="row"><div><label>Full name as passport / registered name</label><input></div><div><label>Phone / WhatsApp</label><input></div></div><div class="row"><div><label>Email</label><input type="email"></div><div><label>Nationality / country</label><input></div></div>`;
+ let extra="";
+ if(selected.name.includes("Class I"))extra=`<div class="row"><div><label>Are you currently in Kenya?</label><select><option>Select</option><option>Yes</option><option>No</option></select></div><div><label>Which Diocese will you work in Kenya?</label><input></div></div><label>Have you obtained consent from the Diocese concerned?</label><select><option>Select</option><option>Yes</option><option>No</option></select><div class="notice">If consent has not yet been obtained, the application will show a customer action requiring Diocese consent.</div>`;
+ if(selected.name.includes("Class Q"))extra=`<div class="row"><div><label>Profession / occupation</label><input></div><div><label>Position</label><input></div></div><div class="row"><div><label>Employer / organization</label><input></div><div><label>Intended work location</label><input></div></div><label>Expected duration / intended period</label><input>`;
+ if(selected.name.includes("Class R"))extra=`<div class="row"><div><label>Current immigration status</label><input></div><div><label>Main purpose in Kenya</label><select><option>Select</option><option>Employment</option><option>Business / Trade</option><option>Investment</option><option>Farming / Agriculture</option><option>Professional activity</option><option>Residence</option><option>Missionary / Religious</option><option>Other</option></select></div></div>`;
+ if(selected.name.includes("Visitor"))extra=`<div class="row"><div><label>Current Visitor's Pass expiry date</label><input type="date"></div><div><label>Requested additional period</label><input placeholder="e.g. 2 months"></div></div><label>Reason for extension</label><textarea></textarea>`;
+ if(["AGPO Registration","IFMIS Registration","eGP Registration"].includes(selected.name))extra=`<div class="row"><div><label>Business / company name</label><input></div><div><label>Registration number</label><input></div></div><div class="row"><div><label>KRA PIN</label><input></div><div><label>Official email</label><input type="email"></div></div><div class="row"><div><label>Contact person</label><input></div><div><label>Official mobile</label><input></div></div>`;
+ return `<h2>Application — ${appRef}</h2><div class="success">Payment verified by DICKORY. Your application is now unlocked and you can continue.</div>${common}${extra}<div class="actions"><button class="primary" onclick="saveApplication()">Save & Continue</button><button class="ghost" onclick="back()">Back</button></div>`}
+function saveApplication(){step=3;render()}
+function documents(){return `<h2>Required Documents</h2><p>Upload through the portal or submit clear PDF/JPG/JPEG/PNG copies through WhatsApp.</p><div class="grid">${selected.req.map((r,i)=>`<div class="card"><strong>${i+1}. ${r}</strong><label>Document</label><input type="file" accept=".pdf,.jpg,.jpeg,.png"><select><option>Pending</option><option>Received</option></select></div>`).join("")}</div><div class="actions"><button class="primary" onclick="finish()">Submit Documents</button><button class="ghost" onclick="back()">Back</button></div>`}
+function finish(){step=4;render()}
+function confirmation(){return `<h2>Application Created</h2><div class="success"><strong>✓ Your application is ready.</strong><br>Reference: <strong>${appRef}</strong></div><table><tr><th>Service</th><td>${selected.name}</td></tr><tr><th>DICKORY service fee</th><td>KES ${selected.fee.toLocaleString()} — PAID</td></tr><tr><th>Government fee</th><td>${selected.gov===false?"No government charge":"Separate / not collected by DICKORY"}</td></tr><tr><th>Status</th><td>Documents Received / Ready for Review</td></tr></table><h3>What happens next?</h3><ol><li>DICKORY reviews your documents.</li><li>Missing or replacement documents are requested if needed.</li><li>Once complete, DICKORY prepares/submits the application.</li><li>If a government invoice is issued, it is shared with you for direct payment to the relevant authority.</li><li>Your application status is updated in the portal.</li></ol><div class="actions"><button class="primary" onclick="newApp()">Start Another Application</button><button class="dark" onclick="whatsapp()">WhatsApp DICKORY</button></div>`}
+function back(){if(step>0){step--;render()}}
+function newApp(){document.getElementById("workflow").classList.add("hidden");window.scrollTo({top:0,behavior:"smooth"})}
+function whatsapp(){window.open("https://wa.me/254796437208?text=Hello%20DICKORY%20Business%20Services%2C%20I%20need%20assistance%20with%20"+encodeURIComponent(selected?selected.name:"a service"),"_blank")}
+function whatsappGeneral(){window.open("https://wa.me/254796437208?text=Hello%20DICKORY%20Business%20Services%2C%20I%20need%20assistance.","_blank")}
+function emailGeneral(){window.location.href="mailto:dickorytraders@gmail.com?subject=DICKORY%20Business%20Services%20Enquiry"}
+</script>
+
+<section class="payment-review-card" style="margin:24px auto;max-width:900px;padding:28px;border-radius:18px;background:#fff;border:1px solid #e5e0d5;box-shadow:0 8px 24px rgba(0,0,0,.06)">
+  <h2 style="margin-top:0">Pay Your DICKORY Service Fee</h2>
+  <p>Please pay the <strong>amount due shown for your selected service</strong>. This payment is for the DICKORY service fee only. The same payment and manual verification process applies to every DICKORY service.</p>
+
+  <div style="padding:18px;border-radius:14px;background:#fffaf0;border:1px solid #ead9a7;margin:18px 0">
+    <div style="font-size:14px;text-transform:uppercase;letter-spacing:.05em">Amount Due</div>
+    <div style="font-size:30px;font-weight:800;margin-top:5px">KES <span id="amountDueDisplay">[SERVICE FEE]</span></div>
+  </div>
+
+  <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:20px 0">
+    <div style="padding:18px;border-radius:14px;background:#f8f5ed">
+      <h3>M-Pesa Till</h3>
+      <p style="font-size:24px;font-weight:700;margin:8px 0">5843161</p>
+      <p style="margin:0">Name: <strong>DICKORY TRADERS</strong></p>
+    </div>
+    <div style="padding:18px;border-radius:14px;background:#f8f5ed">
+      <h3>M-Pesa PayBill</h3>
+      <p style="margin:6px 0">PayBill: <strong>625625</strong></p>
+      <p style="margin:6px 0">Account: <strong>20128282</strong></p>
+      <p style="margin:0">Name: <strong>DICKORY TRADERS</strong></p>
+    </div>
+  </div>
+
+  <div style="padding:18px;border-left:4px solid #b58a24;background:#fffaf0;border-radius:10px">
+    <strong>After payment:</strong> Please share your M-Pesa confirmation message with DICKORY via WhatsApp.
+    Make sure the proof clearly shows the <strong>amount paid</strong> so we can match it against the amount due.
+  </div>
+
+  <a href="https://wa.me/254796437208?text=Hello%20DICKORY%20BUSINESS%20SERVICES.%20I%20have%20paid%20the%20DICKORY%20service%20fee.%20Amount%20due%3A%20KES%20%5BAMOUNT%20DUE%5D.%20I%20am%20sending%20my%20M-Pesa%20confirmation%20message%20for%20verification."
+     target="_blank" rel="noopener"
+     style="display:inline-block;margin-top:18px;padding:13px 20px;border-radius:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:700">
+     Share Proof of Payment via WhatsApp
+  </a>
+
+  <div style="margin-top:20px;padding:16px;border-radius:12px;background:#f8f5ed">
+    <strong>For every service:</strong> pay the amount due, share the M-Pesa confirmation/proof via WhatsApp,
+    DICKORY verifies the payment manually, and the application is unlocked only after verification.
+  </div>
+
+  <div style="margin-top:24px">
+    <h3>What happens next?</h3>
+    <ol style="line-height:1.8">
+      <li>Pay the amount due using either the M-Pesa Till or PayBill above.</li>
+      <li>Forward the M-Pesa confirmation message to DICKORY via WhatsApp.</li>
+      <li>DICKORY verifies the payment manually against the amount due.</li>
+      <li>Once verified, DICKORY unlocks your application.</li>
+      <li>You can then continue with the remaining application stages and document submission.</li>
+    </ol>
+  </div>
+
+  <p style="margin-bottom:0;font-size:14px;color:#666">
+    <strong>Important:</strong> Your application remains locked until DICKORY verifies your service-fee payment.
+    Government/authority charges, where applicable, are separate and are not included in this DICKORY payment.
+  </p>
+</section>
+
+</body>
+</html>
