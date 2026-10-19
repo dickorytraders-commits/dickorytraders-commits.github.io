@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dickorybusinessservices.co.ke/sitemap.xml
