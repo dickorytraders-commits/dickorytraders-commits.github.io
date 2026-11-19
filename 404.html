@@ -1,15 +1,83 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Page not found — DICKORY BUSINESS SERVICES</title><meta name="robots" content="noindex">
-<style>
-*{box-sizing:border-box}html,body{height:100%;margin:0}
-body{display:grid;place-items:center;background:#24473a;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px;text-align:center}
-img{height:70px;width:auto;margin-bottom:22px}
-h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(34px,7vw,56px);margin:0 0 10px}
-p{margin:0 0 26px;color:#d6dfd8;font-size:17px}
-a.btn{display:inline-block;background:#d9a02b;color:#1a1405;font-weight:700;text-decoration:none;padding:13px 24px;border-radius:4px}
-a.btn:hover,a.btn:focus-visible{background:#e6b23f}
-</style></head>
-<body><main><img src="/img/logo.png" width="99" height="70" alt="Dickory Business Services">
-<h1>Page not found</h1><p>The page you are looking for does not exist or has moved.</p>
-<a class="btn" href="/">Back to the homepage</a></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found | Dickory Business Services</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#24473a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2324473a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23d9a02b'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="w">
+    <a class="brand" href="index.html" aria-label="Dickory Business Services home">
+      <img src="images/logo.png" width="93" height="66" alt="Dickory Business Services">
+    </a>
+    <div class="links" id="links">
+      <a href="index.html">Home</a>
+      <a href="supplies.html">Supplies</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn" href="index.html#quote">Request a Quote</a>
+    </div>
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="phead">
+  <div class="w">
+    <p class="kick">404</p>
+    <h1>That page is not here</h1>
+    <p>The link may be out of date, or the page may have moved. Everything on the site is reachable from the pages below.</p>
+  </div>
+</header>
+
+<div class="w" style="padding:52px 0 64px">
+  <div class="grid3">
+    <article class="card">
+      <h3>Supplies</h3>
+      <p style="font-size:13.5px;color:var(--body);margin-bottom:14px">Office, ICT, furniture, stationery, electrical, cleaning and other specified goods.</p>
+      <a class="more" href="supplies.html">See supply categories &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Services</h3>
+      <p style="font-size:13.5px;color:var(--body);margin-bottom:14px">AGPO, IFMIS, eGP, work permits and visitor&rsquo;s pass extensions.</p>
+      <a class="more" href="services.html">See services &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Request a quote</h3>
+      <p style="font-size:13.5px;color:var(--body);margin-bottom:14px">Send your requirement and we will come back with a written quotation.</p>
+      <a class="more" href="index.html#quote">Request a quote &rarr;</a>
+    </article>
+  </div>
+  <p style="margin-top:28px;font-size:14px;color:var(--body)">Or contact us directly: <a href="tel:+254796437208" style="color:#8a6410;font-weight:600">+254 796 437 208</a> &middot; <a href="mailto:info@dickorybusinessservices.co.ke" style="color:#8a6410;font-weight:600">info@dickorybusinessservices.co.ke</a></p>
+</div>
+
+<footer>
+  <div class="w">
+    <div class="copy" style="border-top:0;margin-top:0">
+      <span>&copy; 2026 DICKORY TRADERS LTD &mdash; trading as DICKORY BUSINESS SERVICES</span>
+      <span>Lodwar, Turkana County, Kenya</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'),links=document.getElementById('links');
+  function setMenu(o){links.classList.toggle('open',o);menu.setAttribute('aria-expanded',o?'true':'false');}
+  menu.addEventListener('click',function(){setMenu(!links.classList.contains('open'));});
+  links.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('nav'))setMenu(false);});
+})();
+</script>
+</body>
+</html>
